@@ -3,6 +3,7 @@ package com.antra.sep.springdemo_new.service;
 import com.antra.sep.springdemo_new.dao.DemoDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,12 +14,11 @@ public class DemoServiceImpl implements DemoService{
 	@Autowired
 	DemoDAO aDAO;
 
-	@Autowired
+	@Autowired(required = false)
 	List<String> companyList;
 
 	@Override
 	public void doSomeThing() {
-		System.out.println(companyList);
 		aDAO.doSomething();
 	}
 

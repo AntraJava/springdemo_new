@@ -12,7 +12,7 @@ public class MyConfig {
     @Bean
     @Primary
     List<String> nameList() {
-        return List.of("david","tom","arthur");
+        return List.of();
     }
 
     @Bean
